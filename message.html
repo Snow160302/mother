@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Terminal Seguro</title>
+  <style>
+    body {
+      background-color: black;
+      color: #33ff33;
+      font-family: 'Courier New', Courier, monospace;
+      padding: 20px;
+      white-space: pre;
+      font-size: 16px;
+    }
+
+    #terminal, #asciiOutput {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 10px;
+      background-color: #33ff33;
+      animation: blink 0.7s steps(2, start) infinite;
+    }
+
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+
+    #inputField {
+      background-color: black;
+      border: none;
+      color: #33ff33;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 16px;
+      outline: none;
+      width: 300px;
+    }
+
+    .glitch {
+      position: relative;
+      color: #33ff33;
+      animation: glitch 1s infinite;
+    }
+
+    @keyframes glitch {
+      0% { text-shadow: 2px 0 red, -2px 0 cyan; }
+      20% { text-shadow: -2px 0 red, 2px 0 cyan; }
+      40% { text-shadow: 2px 0 red, -2px 0 cyan; }
+      60% { text-shadow: -2px 0 red, 2px 0 cyan; }
+      80% { text-shadow: 2px 0 red, -2px 0 cyan; }
+      100% { text-shadow: -2px 0 red, 2px 0 cyan; }
+    }
+  </style>
+</head>
+<body>
+  <div id="terminal">
+    <span id="output"></span><span class="cursor"></span><br><br>
+    <div id="inputContainer" style="display: none;">
+      <span>> Introduce comando de activación: </span>
+      <input type="text" id="inputField" autocomplete="off" />
+    </div>
+  </div>
+
+  <div id="asciiOutput" style="display: none;">
+    <pre id="asciiText" class="glitch" style="font-size: 140%;"></pre>
+    <pre id="asciiAutorText" class="glitch" style="font-size: 20%;"></pre>
+    <div id="continueMessage" style="display: none;">
+      <span>> Pulse intro para acceder</span>
+    </div>
+  </div>
+
+  <script>
+    const texto = `
+[BOOT SEQUENCE INITIATED]  
+[LOADING ENVIRONMENT...]  
+█▓▒░ CONNECTION TO SECURE NODE_19 :: ESTABLISHED  
+█▓▒░ USER CREDENTIALS: ████ ████ ████  
+█▓▒░ ACCESS LEVEL: 04 – SEMIRESTRINGIDO  
+█▓▒░ REDIRECTING TO INTERFAZ LOCAL…
+
+> BIENVENIDO AL NÚCLEO DE ARCHIVOS DE INVESTIGACIÓN Y SUPERVIVENCIA.  
+> ESTE TERMINAL ESTÁ BAJO MONITOREO CONSTANTE.
+
+[!] ADVERTENCIA: TODA LA INFORMACIÓN AQUÍ CONTENIDA ESTÁ SUJETA A PROTOCOLOS DE CONFIDENCIALIDAD.  
+[!] ACCEDER SIN AUTORIZACIÓN PUEDE RESULTAR EN LA ACTIVACIÓN DE PROTOCOLOS DE CONTENCIÓN.
+
+> Iniciando decodificación de registros…
+
+███████████████████████████████████████████████████████████████  
+  ARCHIVOS DE PROYECTO :: VELO [REDACTADO] :: CLASIFICACIÓN ALFA  
+  CONTENIDO :: DATOS DE CAMPO – EXPEDICIONES – INFORMES CLAVE  
+  STATUS DEL MUNDO :: INESTABLE  
+  CONEXIONES DE RED :: LIMITADAS – FRAGMENTADAS – MONITOREADAS  
+███████████████████████████████████████████████████████████████
+`;
+
+const asciiLines = [
+  "██████╗ ██╗███████╗███████╗ ██████╗ ███╗   ██╗ █████╗ ███╗   ██╗ ██████╗███████╗",
+  "██╔══██╗██║██╔════╝██╔════╝██╔═══██╗████╗  ██║██╔══██╗████╗  ██║██╔════╝██╔════╝",
+  "██║  ██║██║███████╗███████╗██║   ██║██╔██╗ ██║███████║██╔██╗ ██║██║     █████╗  ",
+  "██║  ██║██║╚════██║╚════██║██║   ██║██║╚██╗██║██╔══██║██║╚██╗██║██║     ██╔══╝  ",
+  "██████╔╝██║███████║███████║╚██████╔╝██║ ╚████║██║  ██║██║ ╚████║╚██████╗███████╗",
+  "╚═════╝ ╚═╝╚══════╝╚══════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝╚══════╝"
+];
+
+const asciiLines2 = [
+  "_    ()         __   ,",
+  "[|}y  []gnacio  [|-ernandez",
+];
+
+let i = 0;
+const speed = 10;
+const output = document.getElementById("output");
+
+function escribir() {
+  if (i < texto.length) {
+    output.innerHTML += texto.charAt(i);
+    i++;
+    setTimeout(escribir, speed);
+  } else {
+    document.getElementById("inputContainer").style.display = "block";
+    document.getElementById("inputField").focus();
+  }
+}
+
+escribir();
+
+const input = document.getElementById("inputField");
+input.addEventListener("keydown", function (e) {
+  if (e.key === "Enter") {
+    if (input.value.trim().toLowerCase() === "dissonance") {
+      document.getElementById("terminal").style.display = "none";
+      document.getElementById("asciiOutput").style.display = "block";
+      animarAscii();
+    } else {
+      output.innerHTML += `\n> Comando no reconocido: ${input.value.trim()}\n> Intente nuevamente.\n`;
+      input.value = "";
+    }
+  }
+});
+
+function animarAscii() {
+  const asciiText = document.getElementById("asciiText");
+  let idx = 0;
+
+  function imprimirLinea() {
+    if (idx < asciiLines.length) {
+      asciiText.innerHTML += asciiLines[idx] + "\n";
+      idx++;
+      setTimeout(imprimirLinea, 200);
+    } else {
+      mostrarAscii2();
+    }
+  }
+
+  imprimirLinea();
+}
+
+function mostrarAscii2() {
+  const asciiText = document.getElementById("asciiText");
+  let idx2 = 0;
+
+  function imprimirLinea2() {
+    if (idx2 < asciiLines2.length) {
+      asciiText.innerHTML += asciiLines2[idx2] + "\n";
+      idx2++;
+      setTimeout(imprimirLinea2, 200);
+    } else {
+      mostrarMensajeContinuar();
+    }
+  }
+
+  imprimirLinea2();
+}
+
+function mostrarMensajeContinuar() {
+  document.getElementById("continueMessage").style.display = "block";
+  const inputField = document.getElementById("inputField");
+
+  // Eliminamos el campo de entrada para evitar conflictos
+  inputField.style.display = "none";
+
+  // Escuchar "Enter" en todo el documento
+  document.addEventListener("keydown", function redirigir(e) {
+    if (e.key === "Enter") {
+      window.location.href = "https://sites.google.com/view/dissonancce/inicio"; // <-- Cambia esta URL
+      document.removeEventListener("keydown", redirigir); // Evitar múltiples ejecuciones
+    }
+  });
+}
+
+</script>
+</body>
+</html>

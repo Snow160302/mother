@@ -1,0 +1,13 @@
+M.O.T.H.E.R AV_2663 — SUPABASE AUTH ONLY
+
+1. Crea un proyecto en Supabase.
+2. En SQL Editor ejecuta MOTHER_AV2663_SUPABASE_SCHEMA.sql UNA SOLA VEZ sobre un proyecto nuevo (las politicas CREATE POLICY existentes no son idempotentes).
+3. Authentication > Providers > Email: habilita email/password, registro de nuevos usuarios y Confirm email. Configura un servicio SMTP adecuado para enviar correos.
+4. Authentication > URL Configuration: establece Site URL y Redirect URLs para el dominio HTTPS donde publicarás index.html; la URL de confirmación debe estar permitida.
+5. Abre index.html, elige CONFIGURAR SUPABASE y proporciona SOLO Project URL y Publishable/anon key. Nunca introduzcas service_role ni secret key.
+6. Registra al administrador inicial nachofrrd123@gmail.com en CREAR CUENTA y verifica su email. El SQL inserta esta dirección en allowed_users como admin nivel 5; el trigger sincroniza su profile.
+7. Otros usuarios pulsan CREAR CUENTA, verifican su correo y esperan autorización. El administrador entra en ADMINISTRACIÓN > GESTIÓN DE WHITELIST y autoriza el correo registrado y su nivel 1-5. El trigger SQL sincroniza el perfil existente, si existe.
+8. Los usuarios aprobados pueden iniciar sesión; viewers no pueden entrar en administración. Las lecturas de documentos/archivos dependen de RLS y Storage privado, no de los botones del HTML.
+9. La interfaz ya no tiene ninguna entrada demo ni datos locales de ejemplo. El HTML abierto sin conexión configurada no permite leer registros.
+
+IMPORTANTE: sin ejecutar el SQL y comprobar las políticas RLS, la interfaz NO basta para proteger los datos. Para cambiar las políticas en un proyecto existente, revisa diferencias y los nombres de las políticas antes de ejecutarlas.

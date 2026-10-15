@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#020b04">
+<title>M.O.T.H.E.R — AV_2663</title>
+<!-- Tipografias retro: se cargan desde Google Fonts y CDNFonts cuando hay conexion -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/white-rabbit" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/letrado-pixel" rel="stylesheet">
+<style>
+:root{--green:#68f997;--bright:#b9ffca;--dim:#328450;--black:#010602;--edge:#286a3f;--shadow:0 0 9px #29ff7670;--speed:1}*{box-sizing:border-box}html{background:#000}body{margin:0;background:radial-gradient(ellipse at center,#092015 0%,#020b05 64%,#000 100%);color:var(--green);font:22px/1.32 'VT323','Courier New',monospace;min-height:100vh;text-shadow:0 0 4px #44ff8866;letter-spacing:.03em}body:before{content:'';position:fixed;inset:0;z-index:40;pointer-events:none;background:repeating-linear-gradient(to bottom,transparent 0px,transparent 3px,rgba(0,0,0,.17) 4px,rgba(0,0,0,.17) 5px);opacity:var(--scan,.8)}body:after{content:'';position:fixed;inset:0;z-index:39;pointer-events:none;box-shadow:inset 0 0 160px 45px #000b,0 0 100px #000;background:rgba(50,255,130,.008);animation:flicker 8s infinite}body.no-crt:before,body.no-crt:after{display:none}@keyframes flicker{0%,97%,100%{opacity:1}98%{opacity:.9}99%{opacity:.98}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}.shell{max-width:1200px;margin:auto;padding:24px 28px 50px;min-height:100vh}.mast{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;border-bottom:1px solid var(--edge);padding:10px 0 22px;margin-bottom:20px}.eyebrow{font-size:12px;letter-spacing:.25em;color:var(--dim)}h1{font-size:clamp(26px,4.5vw,55px);letter-spacing:.1em;line-height:1.13;margin:8px 0 2px;text-shadow:0 0 21px #17ff6955}h2{font-size:20px;margin:2px 0 18px;text-transform:uppercase;letter-spacing:.12em}h3{font-size:15px;letter-spacing:.1em;margin:24px 0 10px}.status{font-size:12px;text-align:right;color:var(--dim)}.status strong{color:var(--green);display:block}.menu{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 22px}.btn,button,select,input,textarea{font-family:inherit;color:var(--green);background:#031108;border:1px solid var(--edge);border-radius:0}button,.btn{padding:9px 13px;cursor:pointer;text-align:left;text-decoration:none;font-size:13px;font-weight:bold;letter-spacing:.03em}button:hover,.btn:hover,button:focus-visible,.btn:focus-visible{background:#17472b;color:var(--bright);border-color:var(--green);box-shadow:var(--shadow);outline:0}button:disabled{opacity:.35;cursor:not-allowed}button.primary{background:#18472b;border-color:var(--green)}button.danger{color:#ffad83;border-color:#a95a38}input,select,textarea{width:100%;padding:10px 12px;outline:none;font-size:14px}input:focus,select:focus,textarea:focus{border-color:var(--bright);box-shadow:var(--shadow)}textarea{min-height:120px;resize:vertical}input[type=file]{padding:8px}label{display:block;color:var(--dim);font-size:12px;letter-spacing:.07em;margin-bottom:5px;text-transform:uppercase}.field{margin-bottom:16px}.field small{font-size:11px;color:var(--dim)}.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 16px}.box{border:1px solid var(--edge);padding:20px;margin:20px 0;background:#010b06b3}.muted{color:var(--dim)}.warning{color:#ffd18c}.error{color:#ff9b87}.success{color:var(--bright)}.topline{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}.tablewrap{overflow:auto;border:1px solid var(--edge);margin-top:13px}table{width:100%;border-collapse:collapse;white-space:nowrap;font-size:13px}th,td{padding:9px 12px;text-align:left;border-bottom:1px solid #174126}th{color:var(--bright);border-bottom:1px solid var(--edge);font-weight:normal}tr:hover td{background:#0b2615}td button{padding:4px 7px}.gridmenu{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px}.tile{display:block;min-height:112px;border:1px solid var(--edge);padding:17px;color:var(--green);background:#05160c;cursor:pointer;text-align:left}.tile:hover{background:#10341e;border-color:var(--green)}.tile b{display:block;font-size:17px}.tile small{display:block;color:var(--dim);margin-top:10px}.back{margin-bottom:15px}.content{white-space:pre-wrap;word-break:break-word;line-height:1.75}.metadata{border-bottom:1px dashed var(--edge);padding-bottom:15px;margin-bottom:20px;font-size:13px}.metadata span{color:var(--dim)}.screen{animation:reveal .25s ease-out}@keyframes reveal{from{opacity:.2;transform:translateY(4px)}to{opacity:1;transform:none}}#flash{min-height:20px;font-size:12px;color:var(--bright);margin-bottom:12px}footer{border-top:1px solid var(--edge);font-size:11px;color:var(--dim);padding-top:14px;margin-top:55px;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}.blink{animation:blink 1s steps(2) infinite}@keyframes blink{50%{opacity:0}}.boot{white-space:pre-wrap;font-size:14px;margin-top:8vh;color:var(--green)}.login{max-width:520px;margin:35px auto 70px}.admin-tag{font-size:10px;border:1px solid var(--edge);padding:3px 7px}.row-actions{display:flex;gap:7px;flex-wrap:wrap}.filelist{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0}.filelist a{color:var(--bright)}.spreadsheet input{min-width:110px;padding:6px}.spreadsheet th input{font-weight:bold}.small{font-size:12px}.notice{border-left:3px solid var(--green);padding:10px 15px;background:#082011}.divider{border:0;border-top:1px dashed var(--edge);margin:25px 0}.actions{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0}.hidden{display:none!important}::selection{color:#001007;background:#7fffb0}@media(max-width:640px){.shell{padding:15px}.mast{display:block}.status{text-align:left;margin-top:15px}.cols{grid-template-columns:1fr}.box{padding:14px}.gridmenu{grid-template-columns:1fr}body{font-size:13px}button{font-size:12px}} 
+
+/* M.O.T.H.E.R / Tipografia VT323 + White Rabbit */
+:root{--font-terminal:'VT323',monospace;--font-display:'White Rabbit','VT323',monospace;--font-micro:'Letrado Pixel','White Rabbit','VT323',monospace}
+body,.content,.boot,textarea,.spreadsheet input{font-family:var(--font-terminal)}
+h1,h2,h3,.eyebrow,.status,.admin-tag,th,.metadata,.tile b{font-family:var(--font-display)}
+button,.btn,input,select,textarea,label{font-family:var(--font-terminal)}
+h1{font-size:clamp(26px,4.3vw,52px);line-height:1.27}
+h2{font-size:clamp(20px,2.1vw,28px)}
+h3{font-size:19px}
+button,.btn{font-size:20px;font-weight:normal;line-height:1.05}
+input,select,textarea{font-size:21px;line-height:1.2}
+label{font-size:17px}
+.eyebrow,.status,.metadata,.admin-tag{font-size:15px}
+.tile b{font-size:19px}
+.tile small,.field small,.small,footer,#flash{font-size:17px}
+table{font-size:18px}
+.boot{font-size:23px}
+.content{font-size:23px}
+@media(max-width:640px){body{font-size:20px}button,.btn{font-size:18px}input,select,textarea{font-size:19px}}
+
+/* AV_2663 : ARCHIVO EN ESTADO DE ABANDONO / EDICION OMINOSA */
+:root{--green:#b4d0b6;--bright:#eef7e8;--dim:#7f9782;--black:#020403;--edge:#4b5f4e;--shadow:0 0 7px #b5dcb560;--scan:.6;--amber:#d2a97a;--amber-dim:#9a7752}
+html{background:#000}
+body{background:radial-gradient(ellipse 70% 78% at 49% 37%,#101714 0%,#060b08 58%,#010201 100%);color:var(--green);text-shadow:0 0 2px #c8e6c840;letter-spacing:.045em}
+body:before{background:repeating-linear-gradient(to bottom,transparent 0px,transparent 3px,rgba(0,0,0,.16) 4px,rgba(0,0,0,.16) 5px);opacity:var(--scan,.6)}
+body:after{box-shadow:inset 0 0 90px 22px #0008,inset 0 0 220px 70px #0008; background:transparent;animation:motherFlicker 19s infinite}
+@keyframes motherFlicker{0%,13%,13.3%,47%,47.4%,79%,79.2%,100%{opacity:1}13.15%,47.2%,79.1%{opacity:.75}}
+.shell{max-width:1120px;padding-top:36px}
+.mast{border-bottom:1px solid #354a35;padding-bottom:27px;margin-bottom:29px;position:relative}
+.mast:after{content:'CORPORATE ARCHIVE // RECOVERED NODE 07';position:absolute;bottom:-12px;left:0;background:#060b08;padding:0 10px 0 0;font:14px 'White Rabbit','VT323',monospace;color:#90a791;letter-spacing:.13em}
+h1{color:#dfe9d9;text-shadow:0 0 10px #d0e7cf2f,0 0 24px #99bf9930;letter-spacing:.18em}
+h2{color:#a2b79f}h3{color:#8aa489}
+.eyebrow{color:#647960;letter-spacing:.2em}
+.status{color:#8ba28e}.status strong{color:#dfe9d9;animation:statusPulse 6s infinite}
+@keyframes statusPulse{50%{opacity:.45}}
+.box{background:linear-gradient(130deg,#0a100dcc,#030504df);border-color:#465848;box-shadow:inset 0 0 28px #0007}
+.tile{background:#0a100d;border-color:#455747;position:relative;transition:background .28s,border-color .28s,box-shadow .28s}
+.tile:before{content:'+';position:absolute;right:15px;top:10px;color:#4b6450;font:20px 'VT323',monospace}
+.tile:hover,.tile:focus-visible{background:#121a15;border-color:#c4d2bd;box-shadow:inset 0 0 24px #152017}
+.tile b{color:#eef7e8}.tile small{color:#8ba08e}
+button,.btn,input,select,textarea{background:#08100b;border-color:#4a5d4d;color:#d4e1d2}
+button:hover,.btn:hover,button:focus-visible,.btn:focus-visible{background:#1a2620;border-color:#e4efe0;color:#ffffff;box-shadow:0 0 8px #d7ead440}
+button.primary{background:#1b2620;border-color:#90a992;color:#f1f7ed}
+label,.muted{color:#97ac99}
+.notice{border-left-color:var(--amber);background:#12100b;color:#d8c0a4}
+.warning,.error{color:var(--amber)}.success{color:#dce9d4}
+.tablewrap{border-color:#4a5f4d}th,td{border-bottom-color:#334435}tr:hover td{background:#151d17}
+.content{color:#dbe6d7}footer{border-color:#394c3d;color:#86a089}
+.boot{color:#dbe6d7;line-height:1.65;white-space:pre-wrap;max-width:840px}
+.boot:before{content:'[ CORPORATE RECOVERY INTERFACE ]';display:block;color:var(--amber);letter-spacing:.14em;margin-bottom:27px;font-family:'White Rabbit','VT323',monospace;font-size:17px}
+.boot:after{content:'\2588';animation:blink 1.15s steps(2) infinite;margin-left:4px}
+.login{border-top:2px solid #9fb49f745d;box-shadow:0 0 50px #000c}
+.screen{animation:darkReveal .5s steps(6) both}
+@keyframes darkReveal{0%{opacity:0;filter:brightness(3)}35%{opacity:.35}100%{opacity:1;filter:brightness(1)}}
+.mother-epigraph{border-left:1px solid #6d806a;padding:10px 18px;margin:26px 0 18px;letter-spacing:.17em;color:#7a8d79;font:16px/1.6 'White Rabbit','VT323',monospace}
+.mother-epigraph em{display:block;color:#ad9e89;font:19px 'VT323',monospace;letter-spacing:.025em;margin-top:10px}
+.mother-seal{margin:22px 0 0;color:#70836b;font:16px 'VT323',monospace;letter-spacing:.12em;opacity:.75}
+body.no-crt:after,body.no-crt:before{display:none}
+@media(prefers-reduced-motion:reduce){.status strong,.screen,.boot:after{animation:none!important}}
+@media(max-width:640px){.shell{padding-top:20px}.mast:after{font-size:11px}.mother-epigraph{font-size:13px}}
+
+
+/* BRUTALIST HORROR MENU OVERRIDE */
+.mother-epigraph{border:1px solid #596c5b;background:linear-gradient(180deg,#101613,#060907);padding:14px 18px;margin:8px 0 20px;letter-spacing:.08em;box-shadow:inset 0 0 0 1px #161d17,inset 0 0 20px #0008}
+.mother-epigraph em{display:block;margin-top:10px;color:var(--amber);font-style:normal;letter-spacing:.12em}
+.menu-warning{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;border-top:1px solid #6f806f;border-bottom:1px solid #364136;padding:12px 0 10px;margin:10px 0 18px;color:#dce7d8;font-family:var(--font-display);letter-spacing:.14em}
+.menu-warning .warning-text{color:var(--amber)}
+.threat-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:14px;margin-top:18px}
+.gridmenu.main-grid{grid-template-columns:1fr;gap:14px}
+.gridmenu.admin-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.tile.brutal{padding:0;min-height:auto;background:linear-gradient(180deg,#101613 0%,#050705 100%);border:1px solid #607061;display:grid;grid-template-columns:96px 1fr 176px;align-items:stretch;overflow:hidden;position:relative;box-shadow:inset 0 0 0 1px #1a201a,inset 0 -14px 30px #0008;transition:transform .12s linear,background .18s linear,border-color .18s linear,box-shadow .18s linear}
+.tile.brutal:before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent 0%,rgba(255,255,255,.02) 52%,transparent 100%);opacity:.45;pointer-events:none}
+.tile.brutal:hover,.tile.brutal:focus-visible{background:linear-gradient(180deg,#161d18 0%,#070908 100%);border-color:#f0f6ea;box-shadow:inset 0 0 0 1px #253027,inset 0 0 30px #1a231c,0 0 0 1px #eef6e944;transform:translateY(-1px)}
+.tile.brutal .tile-id{display:flex;align-items:center;justify-content:center;border-right:1px solid #49584a;background:linear-gradient(180deg,#141a14 0%,#0a0d0a 100%);font-family:var(--font-display);font-size:34px;letter-spacing:.12em;color:#f2f7ec;text-shadow:none}
+.tile.brutal .tile-core{padding:15px 18px 14px}
+.tile.brutal .tile-core .tile-kicker{display:block;margin-bottom:8px;color:#a6b4a5;font-size:14px;letter-spacing:.16em;font-family:var(--font-display)}
+.tile.brutal .tile-core b{font-size:23px;letter-spacing:.13em;color:#f1f6ee;margin:0 0 10px}
+.tile.brutal .tile-core small{font-size:17px;line-height:1.2;color:#b0c0b0;margin:0}
+.tile.brutal .tile-side{border-left:1px solid #425142;padding:13px 14px;display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(180deg,#101411 0%,#060806 100%);text-align:right}
+.tile.brutal .tile-side span{display:block;font-family:var(--font-display);font-size:14px;letter-spacing:.16em;color:#dfe9da}
+.tile.brutal .tile-side .tile-enter{color:var(--amber)}
+.tile.brutal.locked{opacity:.72}
+.tile.brutal.locked .tile-side .tile-enter{color:#7a685c}
+.system-readout{border:1px solid #5d6c5e;background:linear-gradient(180deg,#0d120e 0%,#040604 100%);padding:18px;box-shadow:inset 0 0 18px #0008}
+.system-readout .readout-head{font-family:var(--font-display);letter-spacing:.14em;color:#f0f6ea;margin-bottom:10px}
+.system-readout .readout-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 16px}
+.system-readout .label{color:#aab9aa;font-size:15px;display:block}
+.system-readout .value{color:#ffffff;font-size:20px;display:block}
+.threat-box{border-color:#7b6858;background:linear-gradient(180deg,#15110d 0%,#080605 100%)}
+.threat-box .warning{display:block;font-family:var(--font-display);letter-spacing:.14em;color:var(--amber);margin-bottom:8px}
+@media(max-width:900px){.threat-grid{grid-template-columns:1fr}.gridmenu.admin-grid{grid-template-columns:1fr}.tile.brutal{grid-template-columns:82px 1fr}.tile.brutal .tile-side{grid-column:1/-1;border-left:0;border-top:1px solid #313d31;text-align:left;gap:8px;flex-direction:row;align-items:center;justify-content:space-between}.system-readout .readout-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.menu-warning{font-size:14px}.tile.brutal .tile-id{font-size:28px}.tile.brutal .tile-core b{font-size:20px}.tile.brutal .tile-core small{font-size:15px}.system-readout .value{font-size:18px}}
+
+
+
+/* HOME MENU / ALIEN BRUTALIST OVERRIDE */
+.main-console{border:1px solid #68796a;background:linear-gradient(180deg,#0d1310 0%,#050705 100%);box-shadow:inset 0 0 0 1px #1a221b,inset 0 0 36px #0008;margin-top:12px}
+.main-console .console-cap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:11px 14px;border-bottom:1px solid #4b5a4d;background:linear-gradient(180deg,#151d18 0%,#0c120e 100%);font-family:var(--font-display);letter-spacing:.15em;color:#eaf2e6}
+.main-console .console-cap .cap-right{color:var(--amber)}
+.main-console .console-body{padding:16px}
+.disclaimer-block{border:1px solid #566357;background:linear-gradient(180deg,#121612 0%,#080a08 100%);padding:14px 16px;margin:0 0 16px;box-shadow:inset 0 0 0 1px #1a201a}
+.disclaimer-block .disc-head{display:block;color:#dce8d8;font-family:var(--font-display);letter-spacing:.16em;margin-bottom:10px}
+.disclaimer-block .disc-body{color:#d0dacf;line-height:1.28}
+.disclaimer-block .disc-body strong{color:var(--amber);font-weight:normal;letter-spacing:.08em}
+.console-statusline{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;border-top:1px solid #627062;border-bottom:1px solid #364036;padding:10px 0;margin:0 0 16px;font-family:var(--font-display);letter-spacing:.14em;color:#eef6ea}
+.console-statusline .warning-text{color:var(--amber)}
+.sector-layout{display:grid;grid-template-columns:1.5fr .95fr;gap:16px}
+.sector-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.sector-tile{padding:0;border:1px solid #627262;background:linear-gradient(180deg,#101612 0%,#060806 100%);display:flex;flex-direction:column;min-height:182px;position:relative;overflow:hidden;box-shadow:inset 0 0 0 1px #1c241d,inset 0 -14px 24px #0008;transition:border-color .16s linear,transform .12s linear,box-shadow .16s linear,background .16s linear}
+.sector-tile:hover,.sector-tile:focus-visible{border-color:#f1f7eb;background:linear-gradient(180deg,#171f19 0%,#090b09 100%);box-shadow:inset 0 0 0 1px #263128,inset 0 0 26px #1b241d,0 0 0 1px #edf5e944;transform:translateY(-1px)}
+.sector-tile .windowbar{display:flex;justify-content:space-between;gap:8px;padding:8px 10px;border-bottom:1px solid #49574a;background:linear-gradient(180deg,#1a211b 0%,#111712 100%);font-family:var(--font-display);letter-spacing:.15em;color:#e8f0e3}
+.sector-tile .windowbar .signal{color:var(--amber)}
+.sector-tile .windowbody{padding:14px 14px 12px;display:flex;flex:1;flex-direction:column;gap:8px;text-align:left}
+.sector-tile .windowbody .micro{color:#8ea38f;font-family:var(--font-display);letter-spacing:.13em;font-size:14px}
+.sector-tile .windowbody b{font-family:var(--font-display);font-size:25px;line-height:1.05;letter-spacing:.11em;color:#f5fbf1}
+.sector-tile .windowbody p{margin:0;color:#b9c8ba;line-height:1.18;font-size:17px}
+.sector-tile .windowfoot{display:flex;justify-content:space-between;gap:8px;padding:10px 12px;border-top:1px solid #445245;background:linear-gradient(180deg,#0d120e 0%,#080a08 100%);font-family:var(--font-display);letter-spacing:.14em;color:#dce7d7}
+.sector-tile .windowfoot .enter{color:var(--amber)}
+.side-stack{display:grid;gap:14px}
+.side-panel{border:1px solid #627062;background:linear-gradient(180deg,#111713 0%,#070907 100%);box-shadow:inset 0 0 0 1px #192119,inset 0 0 18px #0007}
+.side-panel .panel-head{display:flex;justify-content:space-between;gap:8px;padding:8px 10px;border-bottom:1px solid #485649;background:linear-gradient(180deg,#19201a 0%,#111612 100%);font-family:var(--font-display);letter-spacing:.15em;color:#eef6ea}
+.side-panel .panel-head span:last-child{color:var(--amber)}
+.side-panel .panel-body{padding:12px 13px}
+.side-panel .readout-list{display:grid;gap:10px}
+.side-panel .readout-list div{padding-bottom:8px;border-bottom:1px solid #334034}
+.side-panel .label{display:block;color:#95aa96;font-size:14px;font-family:var(--font-display);letter-spacing:.12em}
+.side-panel .value{display:block;color:#ffffff;font-size:22px;line-height:1.1}
+.side-panel .memo{color:#c6d1c6;line-height:1.22}
+.side-panel .memo strong{display:block;color:var(--amber);font-family:var(--font-display);font-weight:normal;letter-spacing:.13em;margin-bottom:8px}
+@media(max-width:960px){.sector-layout{grid-template-columns:1fr}.sector-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:700px){.sector-grid{grid-template-columns:1fr}.main-console .console-cap,.console-statusline{font-size:14px}.sector-tile .windowbody b{font-size:22px}.side-panel .value{font-size:19px}}
+
+
+
+/* MINIMAL BRUTAL DATA-ARCHIVE OVERRIDE */
+body{background:radial-gradient(ellipse 120% 100% at 50% 5%,#09110b 0%,#040705 45%,#010201 100%);text-shadow:0 0 2px rgba(147,255,180,.18)}
+.shell{max-width:1180px;padding:38px 42px 96px}
+.mast{padding-bottom:30px;margin-bottom:28px;border-bottom:1px solid #33503c}
+.eyebrow,.status,.metadata,.admin-tag{font-family:var(--font-micro);letter-spacing:.18em}
+h1{font-size:clamp(28px,4vw,56px);letter-spacing:.18em;text-shadow:0 0 10px rgba(160,255,190,.18)}
+h2{margin:0 0 24px;font-size:24px;letter-spacing:.18em}
+.menu.tabnav{display:flex;align-items:flex-end;gap:6px;margin:22px 0 40px;flex-wrap:wrap}
+.menu.tabnav button{padding:10px 15px 8px;border:1px solid #49634d;border-bottom:none;background:#08100a;color:#a8d9b0;min-width:118px;font-family:var(--font-micro);font-size:15px;letter-spacing:.14em}
+.menu.tabnav button:hover,.menu.tabnav button:focus-visible{background:#0e1710;box-shadow:none;border-color:#8ab191;color:#f4fff4}
+.menu.tabnav button.active{background:#111913;color:#fbfffb;border-color:#95b99b}
+.pc-window{border:1px solid #5c7560;background:linear-gradient(180deg,#080b08 0%,#050705 100%);box-shadow:inset 0 0 0 1px #151b16,0 0 0 1px rgba(90,120,96,.14);margin:0 0 34px}
+.pc-topline{padding:8px 12px;border-bottom:1px solid #4a5f4d;background:linear-gradient(180deg,#b5ffe1 0%,#77f7c6 100%);color:#072012;font-family:var(--font-micro);font-size:15px;letter-spacing:.12em}
+.window-tabs{display:flex;gap:10px;padding:0 18px}
+.win-tab{padding:11px 14px 9px;margin-top:-1px;border:1px solid #5b705e;border-top:none;background:#08100a;color:#9fd6a7;font-family:var(--font-micro);font-size:14px;letter-spacing:.14em}
+.win-tab.active{background:#101611;color:#f8fff8;border-color:#8fb594}
+.window-toolbar{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;padding:24px 18px 12px}
+.window-body{padding:10px 18px 24px}
+.browser-grid{display:grid;grid-template-columns:240px 1fr;gap:46px;padding:30px 30px 22px}
+.folder-nav{padding-top:8px}
+.folder-label{margin:0 0 18px;color:#e9fff0;font-family:var(--font-micro);font-size:16px;letter-spacing:.16em}
+.folder-btn{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;width:100%;min-height:92px;margin:0 0 24px;padding:16px 14px;background:transparent;border:1px solid #5f7d66;color:#dcffe3;box-shadow:none}
+.folder-btn:hover,.folder-btn:focus-visible{background:#0b100c;border-color:#d9ffe4;color:#ffffff;transform:none;box-shadow:none}
+.folder-btn .folder-code{font-family:var(--font-micro);font-size:14px;color:#86a68d;letter-spacing:.14em}
+.folder-btn .folder-name{display:block;flex:1;text-align:left;font-family:var(--font-display);font-size:22px;letter-spacing:.08em;line-height:1.05}
+.folder-btn.alt .folder-name{font-size:20px}
+.workspace{display:flex;flex-direction:column;gap:22px;min-height:520px}
+.workspace-tab{max-width:620px;padding:12px 18px;border:1px solid #78a181;background:#08110a;color:#f2fff4;font-family:var(--font-micro);font-size:16px;letter-spacing:.16em}
+.workspace-panel{flex:1;border:1px solid #5d7961;padding:24px 24px 28px;line-height:1.4;min-height:360px;background:rgba(7,12,8,.7)}
+.workspace-panel p{margin:0 0 22px;max-width:720px}
+.workspace-panel strong{font-weight:normal;color:#f3ffb8}
+.workspace-divider{width:100%;max-width:120px;border-top:1px solid #7fa287;margin:28px 0 22px}
+.microline,.status-strip{font-family:var(--font-micro);font-size:14px;letter-spacing:.16em;color:#d8ffe0}
+.status-strip{padding-bottom:2px;color:#c6f7cf}
+input,select,textarea{background:#070d08;border-color:#4a604d;color:#effff0}
+input:focus,select:focus,textarea:focus{border-color:#dffff0;box-shadow:none}
+.tablewrap{border:1px solid #5a735e;background:rgba(8,12,8,.55);margin-top:0}
+table{font-size:19px}
+th,td{padding:11px 13px;border-bottom:1px solid #253328}
+th{font-family:var(--font-micro);font-size:14px;letter-spacing:.14em;color:#ebffee}
+tr:hover td{background:#0c120d}
+.metadata{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 18px;border-bottom:1px solid #35503a;padding-bottom:16px;margin-bottom:24px}
+.content{line-height:1.5;max-width:860px}
+.back{margin-bottom:18px}
+.admin-air-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;padding:8px 2px 18px}
+.admin-air-card{min-height:156px;padding:18px;background:transparent;border:1px solid #5f7b64;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start}
+.admin-air-card:hover,.admin-air-card:focus-visible{background:#0b110c;border-color:#e6ffe9;box-shadow:none}
+.admin-air-card b{font-family:var(--font-display);font-size:24px;line-height:1.08;text-align:left;color:#f2fff3}
+.admin-air-card small{display:block;color:#9bbda1;font-family:var(--font-micro);font-size:14px;letter-spacing:.14em}
+.box{background:rgba(7,11,8,.45);border-color:#445a47;padding:18px}
+.notice{background:#0a0d09;border-left-color:#c5ff52;color:#e9ffd3}
+.warning,.error{color:#f0ff95}
+footer{margin-top:70px}
+@media(max-width:900px){.browser-grid{grid-template-columns:1fr;gap:24px}.workspace{min-height:auto}.metadata{grid-template-columns:1fr}.admin-air-grid{grid-template-columns:1fr}}
+@media(max-width:640px){.shell{padding:22px 18px 70px}.menu.tabnav{gap:4px}.menu.tabnav button{min-width:auto;font-size:13px}.browser-grid{padding:18px 18px 16px}.window-toolbar,.window-body{padding-left:14px;padding-right:14px}.folder-btn{min-height:78px;margin-bottom:14px}.folder-btn .folder-name{font-size:19px}.workspace-panel{padding:18px;min-height:260px}.pc-topline{font-size:13px}}
+
+
+/* TERMINAL DESKTOP / ARCHIVE NODE */
+.desktop-window[hidden]{display:none!important}
+.desktop{position:relative;min-height:690px;background:#010401;border:1px solid #28422d;margin-top:28px;padding:24px 30px 48px;overflow:hidden}
+.desktop:before{content:'';pointer-events:none;position:absolute;inset:0;background:repeating-linear-gradient(transparent 0 35px,#1a301b38 36px);opacity:.22}
+.desktop-head{position:relative;display:flex;justify-content:space-between;gap:20px;border-bottom:1px solid #325c3b;padding-bottom:13px;font-family:var(--font-micro);font-size:14px;letter-spacing:.13em;color:#91c59a}
+.desktop-head strong{font-weight:normal;color:#d2f6d1}
+.desktop-icons{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:42px 24px;max-width:930px;margin:72px auto 0}
+.desktop-entry{border:0;background:transparent!important;box-shadow:none!important;display:flex;flex-direction:column;align-items:center;gap:20px;min-height:126px;padding:10px;color:#a5fcb2;cursor:pointer;text-align:center}
+.desktop-entry:hover,.desktop-entry:focus-visible{outline:1px dashed #79d48c;outline-offset:4px;transform:none;color:#e7ffe9}
+.desktop-entry .glyph{height:44px;width:68px;display:block;position:relative;border:2px solid #80e891;border-top:8px solid #80e891;clip-path:polygon(0 0,30% 0,36% 12%,100% 12%,100% 100%,0 100%);box-shadow:0 0 12px #4fdd6a20}
+.desktop-entry .glyph:after{content:'';position:absolute;top:12px;left:9px;right:9px;border-top:1px solid #80e891}
+.desktop-entry .entry-title{font-family:var(--font-terminal);font-size:24px;line-height:1.05;letter-spacing:.05em}
+.desktop-entry .entry-index{font:13px var(--font-micro);color:#6d9a72}
+.desktop-foot{position:relative;margin-top:95px;border-top:1px solid #1d4025;padding-top:15px;color:#77a67c;font-size:18px;display:flex;justify-content:space-between;gap:16px}
+.desktop-note{position:relative;max-width:800px;margin:45px auto 0;padding:18px 20px;border-left:1px solid #3b7146;color:#a0bea3;font-size:19px;line-height:1.35}
+.desktop-note strong{display:block;font:13px var(--font-micro);color:#c4edc4;letter-spacing:.12em;margin-bottom:10px}
+.desktop-windows{position:absolute;inset:0;pointer-events:none;z-index:4}
+.desktop-window{position:absolute;left:14%;top:80px;width:min(75%,830px);min-height:330px;max-height:calc(100% - 105px);display:flex;flex-direction:column;background:#020a04;border:1px solid #83c593;box-shadow:0 10px 50px #000,0 0 22px #3a8a4c18;pointer-events:auto}
+.desktop-window:nth-child(2){left:19%;top:110px}
+.desktop-window:nth-child(3){left:9%;top:140px}
+.desktop-titlebar{background:#9affad;color:#001605;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:7px 10px;font:15px var(--font-micro);letter-spacing:.08em;cursor:move;user-select:none}
+.desktop-titlebar .window-controls{display:flex;gap:4px}
+.desktop-titlebar button{background:transparent;border:1px solid #24512d;color:#00250b;font:17px var(--font-terminal);padding:0 8px;line-height:1;min-width:28px;text-align:center}
+.desktop-titlebar button:hover{background:#002c10;color:#caffd0}
+.desktop-window-main{padding:24px;overflow:auto;min-height:270px;flex:1;scrollbar-color:#6caa75 #020a04}
+.desktop-window-main h3{font:17px var(--font-micro);color:#c1fac8;margin:0 0 24px}
+.desktop-window-main .archive-rows{display:grid;gap:8px}
+.desktop-window-main .archive-row{border:0;border-bottom:1px solid #1c4825;background:transparent;display:grid;grid-template-columns:110px 100px 1fr 60px;gap:12px;width:100%;padding:10px 2px;font:19px var(--font-terminal);text-align:left;color:#aef9ba}
+.desktop-window-main .archive-row:hover{background:#103319;color:#fff;box-shadow:none}
+.desktop-window-main .archive-empty{color:#7db488;font:23px var(--font-terminal);padding:36px 0}
+.desktop-window-main .window-description{color:#80ac88;font-size:18px;margin:0 0 25px}
+.desktop-window-main .window-actions{display:flex;gap:12px;flex-wrap:wrap}
+.desktop-window-main .window-actions button{font-size:20px}
+.desktop-window-main input{max-width:100%;margin-bottom:18px}
+.desktop-taskbar{position:absolute;bottom:0;left:0;right:0;display:flex;gap:10px;padding:7px 14px;border-top:1px solid #294d30;background:#050d07;z-index:6;min-height:36px}
+.desktop-taskbar button{border:1px solid #355d3e;background:#06160a;font:15px var(--font-terminal);padding:3px 10px;min-width:110px;color:#b4eabb}
+.desktop-taskbar button.active{background:#22452a;border-color:#8bd79d}
+@media(max-width:780px){.desktop{padding:20px 14px 50px;min-height:690px}.desktop-icons{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 8px;margin-top:38px}.desktop-entry{min-height:105px}.desktop-entry .entry-title{font-size:19px}.desktop-note{margin-top:32px}.desktop-window,.desktop-window:nth-child(2),.desktop-window:nth-child(3){left:3%;top:58px;width:94%;max-height:calc(100% - 103px)}.desktop-window-main{padding:16px}.desktop-window-main .archive-row{grid-template-columns:84px 1fr 40px;font-size:17px}.desktop-window-main .archive-row .archive-date{display:none}.desktop-head{font-size:12px}}
+
+
+/* WIDESCREEN DESKTOP / MINIMAL NAVIGATION */
+.shell{max-width:none;width:100%;padding:clamp(18px,2.5vw,42px) clamp(20px,3.3vw,72px) 40px}
+.mast{margin-bottom:clamp(20px,3vh,42px)}
+.utility-nav{display:flex;justify-content:space-between;align-items:center;gap:16px;margin:0 0 30px}
+.utility-nav button{font-family:var(--font-micro);font-size:14px;letter-spacing:.12em;padding:8px 11px;border:1px solid #2c5035;background:transparent}
+.desktop{width:100%;height:clamp(680px,calc(100dvh - 255px),1200px);min-height:680px;margin-top:0;padding:clamp(20px,2vw,40px) clamp(22px,3vw,64px) 52px}
+.desktop-icons{max-width:1400px;width:100%;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:clamp(35px,5vw,100px);row-gap:clamp(44px,7vh,100px);margin:clamp(45px,8vh,110px) auto 0}
+.desktop-entry{min-height:clamp(126px,16vh,170px)}
+.desktop-window{left:12%;top:9%;width:min(76%,1080px);min-height:360px;max-height:calc(100% - 100px)}
+.desktop-window:nth-child(2){left:16%;top:12%}
+.desktop-window:nth-child(3){left:8%;top:15%}
+.desktop-note{max-width:1000px;margin-top:clamp(36px,6vh,90px)}
+.desktop-foot{margin-top:clamp(40px,6vh,95px)}
+.desktop-window-main{padding:clamp(20px,2vw,38px)}
+.desktop-window-main .archive-row{grid-template-columns:140px 130px minmax(0,1fr) 70px}
+@media(min-width:1800px){.desktop{height:calc(100dvh - 235px);min-height:760px}.desktop-icons{max-width:1600px}.desktop-window{width:min(72%,1260px)}}
+@media(min-width:2500px){.shell{max-width:2900px;margin:auto}.desktop{height:calc(100dvh - 260px)}.desktop-entry .entry-title{font-size:clamp(24px,1.1vw,32px)}}
+@media(max-width:1000px){.desktop-icons{grid-template-columns:repeat(3,minmax(0,1fr));gap:42px 22px}.desktop-window{left:5%;width:90%}}
+@media(max-width:780px){.shell{padding:20px 14px 28px}.desktop{min-height:710px;height:max(710px,calc(100dvh - 230px));padding:20px 14px 54px}.desktop-icons{grid-template-columns:repeat(2,minmax(0,1fr));margin:38px auto 0;gap:24px 10px}.desktop-window,.desktop-window:nth-child(2),.desktop-window:nth-child(3){left:3%;top:58px;width:94%;max-height:calc(100% - 103px)}.desktop-window-main .archive-row{grid-template-columns:84px minmax(0,1fr) 45px}.desktop-window-main .archive-row .archive-date{display:none}.desktop-note{margin-top:24px}.desktop-foot{margin-top:35px}.utility-nav{margin-bottom:18px}}
+
+/* MONOCHROME PHOSPHOR SYSTEM - FINAL PALETTE */
+:root{--green:#82e79a;--bright:#bcffca;--dim:#518d60;--black:#000;--edge:#3a8150;--shadow:0 0 7px #37cd5e44;--amber:#82e79a;--amber-dim:#518d60;--scan:.35}
+html,body{background:#000!important;color:var(--green)!important;text-shadow:0 0 2px #50db6f3b!important}
+body:after{background:none!important;box-shadow:inset 0 0 80px #0005!important}
+body:before{opacity:.3!important}
+.mast,.box,.desktop,.pc-window,.desktop-window,.desktop-head,.desktop-foot,.desktop-note,.desktop-entry,.desktop-window-main,.desktop-taskbar,.window-tabs,.window-body,.window-toolbar,.login,.notice,.tablewrap,.folder-btn,.workspace,.workspace-panel,.side-panel,.main-console,.disclaimer-block,.sector-tile,.win-tab,.tile,.admin-air-card,.desktop-window-titlebar{background:#000!important;background-image:none!important;box-shadow:none!important;border-color:var(--edge)!important}
+.pc-topline,.desktop-window-bar,.desktop-window-titlebar,.desktop-head,.console-cap{background:#09200e!important;background-image:none!important;color:var(--bright)!important}
+button,.btn,input,select,textarea,.folder-btn,.desktop-entry,.desktop-icon,.desktop-window button{background:#000!important;color:var(--green)!important;border-color:var(--edge)!important;box-shadow:none!important}
+button:hover,button:focus-visible,.btn:hover,.desktop-entry:hover,.folder-btn:hover{background:#0b2613!important;color:var(--bright)!important;border-color:var(--bright)!important}
+button:disabled{color:var(--dim)!important}
+body :is(h1,h2,h3,b,strong,th,.entry-title,.desktop-head,.status,.eyebrow,.microline,.window-title,.desktop-window-title,.folder-name,.window-description,.console-cap,.win-tab,.pc-topline){color:var(--bright)!important;text-shadow:none!important}
+body :is(p,span,div,td,label,small,footer){text-shadow:none}
+body :is(.muted,.desktop-note,.desktop-foot,.metadata span,.folder-code,.entry-meta){color:var(--dim)!important}
+.error,.danger,.access-denied,.blocked,[aria-invalid="true"]{color:#ff4949!important;border-color:#ff4949!important}
+.error *,.danger *,.access-denied *{color:#ff4949!important}
+.warning,.notice,.success,.warning-text,.signal,.tile-enter{color:var(--green)!important}
+input:focus,textarea:focus,select:focus{outline:1px solid var(--bright)!important}
+::selection{background:var(--green)!important;color:#000!important}
+/* STARTUP: one font, one green, generous empty space */
+.boot{font-family:'VT323',monospace!important;font-size:clamp(19px,1.6vw,26px)!important;line-height:1.24!important;letter-spacing:0!important;text-shadow:none!important;max-width:850px;margin:clamp(60px,12vh,160px) 0 0!important;white-space:pre-wrap}
+.boot:before,.boot:after{content:none!important;display:none!important}
+.boot .boot-bar{display:block;width:min(580px,85vw);height:12px;border:1px solid var(--green);margin:18px 0 12px;background:linear-gradient(90deg,var(--green) var(--progress,0%),transparent var(--progress,0%))!important}
+.boot .boot-head{font-family:'VT323',monospace;color:var(--bright);font-size:1.15em}
+.boot .boot-dim{color:var(--dim)}
+.boot .boot-cursor{display:inline-block;width:10px;height:20px;background:var(--green);vertical-align:middle;animation:blink 1s steps(2) infinite}
+.boot-screen .mast,.boot-screen footer{display:none!important}
+.boot-screen .shell{padding-top:0!important}
+.boot-screen .screen{animation:none!important}
+@media(prefers-reduced-motion:reduce){.boot .boot-cursor{animation:none!important}}
+
+
+/* MONOCHROME ARCHIVE / NO BOLD / ASCII HEADING SYSTEM */
+html body, html body * { font-weight:400 !important; font-synthesis:none; }
+h1,h2,h3,.desktop-head,.desktop-note,.entry-title,.window-title,.pc-topline,.win-tab {font-weight:400 !important;}
+h2::before{content:'[ ';color:var(--green)}
+h2::after{content:' ]';color:var(--green)}
+h3::before{content:'-- ';color:var(--green)}
+h3::after{content:' --';color:var(--green)}
+.desktop-note strong::before{content:'[ ';}
+.desktop-note strong::after{content:' ]';}
+
+
+/* WINDOW MANAGER / GLOBAL VIEWPORT / 5:4 CLASSIC TERMINAL */
+.desktop-windows{position:fixed!important;inset:0!important;z-index:90!important;pointer-events:none!important;overflow:visible!important}
+.desktop-window,.desktop-window:nth-child(2),.desktop-window:nth-child(3){position:fixed!important;left:auto;top:auto;width:min(760px,calc(100vw - 32px))!important;height:min(608px,calc(100dvh - 32px))!important;min-height:0!important;max-height:none!important;max-width:none!important;aspect-ratio:5/4;pointer-events:auto!important;overflow:hidden}
+.desktop-window[hidden]{display:none!important}
+.desktop-titlebar{touch-action:none;cursor:grab}
+.desktop-titlebar:active{cursor:grabbing}
+.desktop-window-main{min-height:0!important;overflow:auto!important}
+.desktop-taskbar{z-index:95!important}
+/* CENTER THE LOGIN PANEL, KEEP ITS CONTENT LEFT-ALIGNED */
+.screen:has(> .login){min-height:calc(100dvh - 250px);display:flex;justify-content:center;align-items:center}
+.screen:has(> .login)>.login{width:min(560px,calc(100vw - 40px));max-width:560px;margin:0;text-align:left}
+.screen:has(> .login)>.login *{text-align:left}
+@media(max-width:700px){.desktop-window,.desktop-window:nth-child(2),.desktop-window:nth-child(3){width:calc(100vw - 18px)!important;height:min(75dvh,calc(100dvh - 18px))!important;aspect-ratio:auto}.screen:has(> .login){min-height:calc(100dvh - 150px)}}
+
+/* VIEWPORT-FITTED DESKTOP + HIGHER INTENSITY CRT */
+html:has(.desktop),body:has(.desktop){height:100%;overflow:hidden!important}
+body:has(.desktop) .shell{height:100dvh;min-height:0!important;max-width:none!important;padding:clamp(10px,1.2vh,18px) clamp(12px,2vw,34px) 8px!important;display:flex;flex-direction:column;overflow:hidden!important}
+body:has(.desktop) .mast{flex:0 0 auto;padding:0 0 8px!important;margin-bottom:4px!important}
+body:has(.desktop) h1{font-size:clamp(25px,3.1vh,43px)!important;margin:1px 0!important}
+body:has(.desktop) .eyebrow{font-size:clamp(11px,1.3vh,15px)!important}
+body:has(.desktop) #flash{min-height:0;margin:0!important}
+body:has(.desktop) .screen{flex:1;min-height:0;display:flex;flex-direction:column;overflow:hidden!important}
+body:has(.desktop) .screen>h2{font-size:clamp(17px,2.5vh,25px)!important;margin:0 0 7px!important}
+body:has(.desktop) .desktop{flex:1;height:auto!important;min-height:0!important;max-height:none!important;margin:4px 0 0!important;overflow:hidden!important;padding:clamp(12px,1.7vh,24px) clamp(12px,2vw,30px) 42px!important}
+body:has(.desktop) .desktop-icons{margin:clamp(16px,4vh,48px) auto 0!important;gap:clamp(10px,2vh,26px) 18px!important}
+body:has(.desktop) .desktop-entry{min-height:clamp(70px,11vh,110px)!important;gap:clamp(4px,1.2vh,12px)!important;padding:5px!important}
+body:has(.desktop) .desktop-entry .glyph{height:clamp(28px,4.2vh,44px)!important;width:clamp(46px,6vh,68px)!important}
+body:has(.desktop) .desktop-note{margin:clamp(12px,3vh,32px) auto 0!important;padding:8px 14px!important;font-size:clamp(15px,1.9vh,19px)!important}
+body:has(.desktop) .desktop-foot{margin-top:clamp(8px,2.5vh,26px)!important;padding-top:9px!important}
+body:has(.desktop) footer{flex:0 0 auto;margin:4px 0 0!important;padding-top:4px!important}
+.desktop-titlebar{touch-action:none!important;cursor:grab!important;user-select:none!important}
+.desktop-window{transform:none!important;right:auto!important;bottom:auto!important;}
+body:not(.no-crt)::before{opacity:.88!important;background:repeating-linear-gradient(0deg,rgba(0,0,0,.34) 0px,rgba(0,0,0,.34) 1px,transparent 2px,transparent 4px)!important}
+body:not(.no-crt)::after{opacity:1!important;box-shadow:inset 0 0 85px 18px #0008,inset 0 0 180px 45px #0008!important;animation:motherFlicker 12s infinite!important}
+@media(max-height:680px){body:has(.desktop) .desktop-head{padding-bottom:5px!important}body:has(.desktop) .desktop-note{max-width:650px!important;line-height:1.12!important}body:has(.desktop) .desktop-entry .entry-title{font-size:clamp(17px,2.6vh,23px)!important}}
+@media(max-width:700px){body:has(.desktop) .desktop-icons{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:10px 4px!important}body:has(.desktop) .desktop-note{font-size:14px!important}.desktop-window{max-width:calc(100vw - 12px)!important}}
+@media(prefers-reduced-motion:reduce){body:not(.no-crt)::after{animation:none!important}}
+
+</style>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+</head><body><div id="app" class="shell"></div>
+<script>
+(()=>{'use strict';
+const ADMIN_EMAIL='nachofrrd123@gmail.com',CATS=['FICHAS DE EMPLEADO','EXPEDIENTES','REGISTROS','CONFIDENCIAL','MISCELÁNEO'],PREFIX=['EMP','EXP','REG','CNF','MSC'],LEVELS=['','BÁSICO','RESTRINGIDO','CONFIDENCIAL','SECRETO','M.O.T.H.E.R'];
+const $=id=>document.getElementById(id), esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])), date=v=>v?String(v).slice(0,10):'—',uid=()=>crypto.randomUUID(), today=()=>new Date().toISOString().slice(0,10);
+let sb=null,mode=localStorage.getItem('mother_mode')||'none',user=null,view='login',cat=0,doc=null,formCat=0,attachments=[],registry={columns:['CAMPO','VALOR'],rows:[['001','ACTIVE']]},appConfig={},editing=false,searchTerm='';
+const demoKey='mother_demo_v2';let store=JSON.parse(localStorage.getItem(demoKey)||'null')||{documents:[],users:[{email:ADMIN_EMAIL,clearance_level:5,role:'admin',status:'active'}]};
+function save(){localStorage.setItem(demoKey,JSON.stringify(store))}function readConfig(){try{return JSON.parse(localStorage.getItem('mother_supabase')||'{}')}catch{return {}}}function connect(){const c=readConfig();if(c.url&&c.key&&window.supabase){sb=window.supabase.createClient(c.url,c.key);return true}return false}connect();
+const clearance=()=>Number(user?.clearance_level||0),isAdmin=()=>user?.role==='admin';function flash(m,bad=false){const e=$('flash');if(e){e.textContent=(bad?'ERROR :: ':'SYSTEM :: ')+m;e.className=bad?'error':'success'}}
+function layout(body){$('app').innerHTML=`<header class="mast"><div><div class="eyebrow">CENTRAL ARCHIVE SYSTEM / ISOLATED TERMINAL AV_2663</div><h1>M.O.T.H.E.R<span class="blink">_</span></h1><div class="muted small">ARCHIVO DE EXPEDIENTES // INSTALACIÓN CLAUSURADA / 1976</div></div><div class="status"><strong>◌ SIGNAL DETECTED</strong>MODE: ${mode==='demo'?'LOCAL DEMO':mode==='supabase'?'SECURE DATABASE':'DISCONNECTED'}<br>${user?`USER: ${esc(user.email)}<br>CLEARANCE: ${clearance().toString().padStart(2,'0')} ${isAdmin()?' / ADMIN':''}`:'AUTHORIZATION REQUIRED'}</div></header><div id="flash" role="status" aria-live="polite"></div><main class="screen">${body}</main><footer><span>M.O.T.H.E.R // TERMINAL ${esc('AV_2663')}</span><span>ACTIVITY IS BEING RECORDED · <a href="#" id="crt" style="color:inherit">TOGGLE CRT</a></span></footer>`;$('crt').onclick=e=>{e.preventDefault();document.body.classList.toggle('no-crt');localStorage.setItem('mother_no_crt',document.body.classList.contains('no-crt')?'1':'0')}}
+if(localStorage.getItem('mother_no_crt')==='1')document.body.classList.add('no-crt');
+const nav=()=>`<nav class="utility-nav"><button data-nav="home">← ESCRITORIO</button><button data-nav="logout">CERRAR SESIÓN ↗</button></nav>`;
+function wireNav(){document.querySelectorAll('[data-nav]').forEach(b=>b.onclick=()=>go(b.dataset.nav));document.querySelectorAll('[data-cat]').forEach(b=>b.onclick=()=>{cat=+b.dataset.cat;go('category')})}
+async function fetchDocs(){if(mode==='demo')return store.documents.filter(d=>d.status!=='archived'&&Number(d.clearance_level)<=clearance());const {data,error}=await sb.from('documents').select('*').eq('status','published').order('created_at',{ascending:false});if(error)throw error;return data||[]}
+async function getDoc(id){if(mode==='demo')return store.documents.find(d=>d.id===id&&Number(d.clearance_level)<=clearance())||null;const {data,error}=await sb.from('documents').select('*').eq('id',id).maybeSingle();if(error)throw error;return data}
+async function fetchOwnAllDocs(){if(mode==='demo')return [...store.documents];const {data,error}=await sb.from('documents').select('*').order('created_at',{ascending:false});if(error)throw error;return data||[]}
+function splash(){
+ document.body.classList.add('boot-screen');
+ layout(`<section class="boot" id="boot" aria-label="Secuencia de arranque"><div class="boot-head">[BOOT SEQUENCE INITIATED]</div><div class="boot-dim">M.O.T.H.E.R // AV_2663</div><div id="boot-lines"></div><div class="boot-bar" id="boot-progress" style="--progress:0%"></div><div class="boot-dim" id="boot-percent">INITIALIZING... 0%</div><span class="boot-cursor" aria-hidden="true"></span></section><div class="actions"><button id="skip">[ OMITIR INTRO ]</button></div>`);
+ const lines=['[LOADING ENVIRONMENT...]','> TERMINAL LOCAL INICIADO','> ARCHIVO CENTRAL: AV_2663','> PROTOCOLOS DE ACCESO CARGADOS','', '[!] INFORMACIÓN RESTRINGIDA. ACCESO SUJETO A AUTORIZACIÓN.'];
+ let step=0,progress=0,finished=false,handle;
+ function finish(){if(finished)return;finished=true;clearTimeout(handle);document.body.classList.remove('boot-screen');go('login')}
+ function tick(){if(finished)return;if(step<lines.length){const d=document.createElement('div');d.textContent=lines[step++];$('boot-lines').appendChild(d)}progress=Math.min(100,progress+10);$('boot-progress').style.setProperty('--progress',progress+'%');$('boot-percent').textContent='INICIALIZANDO ARCHIVO... '+progress+'%';if(progress>=100){handle=setTimeout(finish,900)}else{handle=setTimeout(tick,305)}}
+ $('skip').onclick=finish;
+ handle=setTimeout(tick,480)
+}
+function go(s){view=s;if(s==='login'){loginPage();return}if(!user){loginPage();return}if(s==='logout'){logout();return}if(s==='home')home();if(s==='category')categoryPage();if(s==='search')searchPage();if(s==='admin'&&isAdmin())admin();if(s==='users'&&isAdmin())usersPage();if(s==='adminDocs'&&isAdmin())adminDocs();if(s==='create'&&isAdmin())formPage();if(s==='config'&&isAdmin())configPage()}
+function loginPage(){document.body.classList.remove('boot-screen');user=null;view='login';layout(`<div class="login box"><h2>IDENTITY VERIFICATION</h2><div class="muted small">THIS TERMINAL HAS NOT BEEN IN SERVICE SINCE 1976. ALL ACCESS IS RECORDED.</div><hr class="divider"><form id="loginform"><div class="field"><label>CORREO ELECTRÓNICO</label><input id="email" type="email" autocomplete="email" required placeholder="usuario@dominio.com"></div><div class="field"><label>CLAVE DE ACCESO</label><input id="password" type="password" autocomplete="current-password" required></div><div class="actions"><button class="primary" type="submit">[ AUTHENTICATE ]</button><button type="button" id="signup">[ SOLICITAR REGISTRO ]</button></div></form><p class="small muted">Para acceder al archivo real necesitas estar autorizado en la whitelist. El registro no concede acceso por sí solo.</p>${!sb?`<hr class="divider"><p class="warning small">BASE DE DATOS SIN CONFIGURAR. La DEMO es local, pública y NO ofrece seguridad real.</p><button id="demo">[ ENTRAR EN DEMO LOCAL ]</button><button id="setup">[ CONFIGURAR SUPABASE ]</button>`:''}</div>`);$('loginform').onsubmit=async e=>{e.preventDefault();if(!sb)return flash('CONFIGURA SUPABASE O UTILIZA DEMO',true);try{const {data,error}=await sb.auth.signInWithPassword({email:$('email').value.trim(),password:$('password').value});if(error)throw error;await sessionToUser(data.user)}catch(err){flash(err.message,true)}};$('signup').onclick=async()=>{if(!sb)return flash('CONFIGURA SUPABASE PRIMERO',true);const email=$('email').value.trim(),password=$('password').value;if(!email||password.length<8)return flash('INTRODUCE CORREO Y CLAVE DE 8+ CARACTERES',true);const {error}=await sb.auth.signUp({email,password});flash(error?error.message:'REGISTRO RECIBIDO. VERIFICA TU CORREO. SOLO ACCEDERÁS SI ESTÁS EN LA WHITELIST.',!!error)};if($('demo'))$('demo').onclick=()=>{mode='demo';localStorage.setItem('mother_mode',mode);user={email:ADMIN_EMAIL,role:'admin',clearance_level:5};go('home')};if($('setup'))$('setup').onclick=setupPage}
+function setupPage(){layout(`<div class="box login"><h2>DATABASE CONFIGURATION</h2><p class="warning">Introduce únicamente URL de proyecto y ANON/PUBLISHABLE KEY. Jamás introduzcas SERVICE_ROLE_KEY.</p><form id="dbform"><div class="field"><label>SUPABASE PROJECT URL</label><input id="url" type="url" required placeholder="https://xxxxx.supabase.co"></div><div class="field"><label>PUBLISHABLE / ANON KEY</label><input id="key" required placeholder="sb_publishable_... / eyJ..."></div><button type="submit">[ CONNECT ]</button> <button type="button" id="back">ATRÁS</button></form><p class="muted small">Antes de conectar, ejecuta schema.sql en el SQL Editor de Supabase y crea tu usuario administrador.</p></div>`);$('dbform').onsubmit=e=>{e.preventDefault();localStorage.setItem('mother_supabase',JSON.stringify({url:$('url').value.trim(),key:$('key').value.trim()}));connect();mode='supabase';localStorage.setItem('mother_mode',mode);loginPage()};$('back').onclick=loginPage}
+async function sessionToUser(authUser){if(!authUser)return loginPage();const {data,error}=await sb.from('profiles').select('email,role,clearance_level,status').eq('id',authUser.id).maybeSingle();if(error||!data||data.status!=='active'){await sb.auth.signOut();loginPage();flash('USUARIO NO AUTORIZADO O SUSPENDIDO',true);return}mode='supabase';localStorage.setItem('mother_mode',mode);user=data;go('home')}
+async function logout(){if(mode==='supabase'&&sb)await sb.auth.signOut();user=null;go('login')}
+function home(){layout(`<div class="eyebrow">CENTRAL MEMORY / USER WORKSTATION</div><h2>TERMINAL DESKTOP // AV_2663</h2><section class="desktop" id="desktop"><div class="desktop-head"><span><strong>M.O.T.H.E.R</strong> / SISTEMA CENTRAL DE ARCHIVOS</span><span>OPERATOR: ${esc(user?.email||'UNKNOWN')} // LVL ${clearance()}</span></div><div class="desktop-icons">${CATS.map((c,i)=>`<button class="desktop-entry" data-deskcat="${i}" title="Abrir ${c}"><span class="glyph" aria-hidden="true"></span><span class="entry-title">${c}</span><span class="entry-index">0${i+1} / ${PREFIX[i]}</span></button>`).join('')}<button class="desktop-entry" data-desksearch="1"><span class="glyph" aria-hidden="true"></span><span class="entry-title">BUSCAR</span><span class="entry-index">06 / QUERY</span></button>${isAdmin()?`<button class="desktop-entry" data-deskadmin="1"><span class="glyph" aria-hidden="true"></span><span class="entry-title">ADMINISTRACIÓN</span><span class="entry-index">99 / ROOT</span></button>`:''}</div><div class="desktop-note"><strong>ARCHIVOS NO RELACIONADOS // DESCARGO DE RESPONSABILIDAD</strong>LA ORGANIZACIÓN NO ASUME RESPONSABILIDAD POR LAS CONSECUENCIAS DEL VISIONADO, COPIA O DIFUSIÓN DEL CONTENIDO. EL OPERADOR ASUME LOS RIESGOS DE SU CONSULTA Y DIVULGACIÓN.</div><div class="desktop-foot"><span>NODE 07 / MEMORY INTEGRITY: UNVERIFIED</span><span>SELECT DIRECTORY TO RETRIEVE</span></div><div class="desktop-windows" id="desktop-windows"></div><div class="desktop-taskbar" id="desktop-taskbar"><span style="font:16px var(--font-terminal);color:#84bc8e">WORKSPACE 00 //</span></div></section>`);wireNav();document.querySelectorAll('[data-deskcat]').forEach(b=>b.onclick=()=>openDesktopWindow('cat',+b.dataset.deskcat));document.querySelector('[data-desksearch]')?.addEventListener('click',()=>openDesktopWindow('search'));document.querySelector('[data-deskadmin]')?.addEventListener('click',()=>openDesktopWindow('admin'));}
+let desktopSerial=0;
+async function openDesktopWindow(kind,index=0){const desktop=$('desktop'),host=$('desktop-windows'),bar=$('desktop-taskbar');if(!desktop||!host)return;const id='dw-'+(++desktopSerial),title=kind==='cat'?CATS[index]:kind==='search'?'BÚSQUEDA CENTRAL':'SYSTEM ADMINISTRATION';const el=document.createElement('section');el.className='desktop-window';el.id=id;el.setAttribute('aria-label',title);el.innerHTML=`<div class="desktop-titlebar"><span>AV_2663 // ${esc(title)}</span><span class="window-controls"><button data-min title="Minimizar" aria-label="Minimizar">_</button><button data-close title="Cerrar" aria-label="Cerrar">X</button></span></div><div class="desktop-window-main"><h3>RETRIEVING ARCHIVE...</h3></div>`;host.appendChild(el);const initialOffset=(desktopSerial%5)*27;el.style.left=Math.max(8,Math.round((innerWidth-Math.min(760,innerWidth-32))/2)+initialOffset-54)+'px';el.style.top=Math.max(8,Math.round((innerHeight-Math.min(608,innerHeight-32))/2)+initialOffset-54)+'px';const task=document.createElement('button');task.textContent=title;task.className='active';bar.appendChild(task);const focus=()=>{host.querySelectorAll('.desktop-window').forEach(w=>w.style.zIndex='1');el.style.zIndex=String(100+desktopSerial++);bar.querySelectorAll('button').forEach(b=>b.classList.remove('active'));task.classList.add('active')};const close=()=>{el.remove();task.remove()};el.querySelector('[data-close]').onclick=close;el.querySelector('[data-min]').onclick=()=>{el.hidden=true;task.classList.remove('active')};task.onclick=()=>{el.hidden=false;focus()};el.addEventListener('pointerdown',focus);focus();let drag=null;const handle=el.querySelector('.desktop-titlebar');
+const onMove=e=>{if(!drag||e.pointerId!==drag.id)return;const w=el.offsetWidth,h=el.offsetHeight;const left=e.clientX-drag.offsetX,top=e.clientY-drag.offsetY;el.style.left=Math.round(Math.min(Math.max(left,0),Math.max(0,innerWidth-w)))+'px';el.style.top=Math.round(Math.min(Math.max(top,0),Math.max(0,innerHeight-h)))+'px';};
+const stopDrag=e=>{if(!drag||(e&&e.pointerId!==drag.id))return;drag=null;handle.style.cursor='grab';window.removeEventListener('pointermove',onMove);window.removeEventListener('pointerup',stopDrag);window.removeEventListener('pointercancel',stopDrag);};
+handle.addEventListener('pointerdown',e=>{if(e.button!==0||e.target.closest('button'))return;e.preventDefault();focus();const r=el.getBoundingClientRect();drag={id:e.pointerId,offsetX:e.clientX-r.left,offsetY:e.clientY-r.top};handle.style.cursor='grabbing';window.addEventListener('pointermove',onMove);window.addEventListener('pointerup',stopDrag);window.addEventListener('pointercancel',stopDrag);});
+
+const body=el.querySelector('.desktop-window-main');if(kind==='cat'){try{const rows=(await fetchDocs()).filter(d=>d.category===CATS[index]);if(!el.isConnected)return;const render=q=>{const filtered=rows.filter(d=>(d.document_code+' '+d.title+' '+d.index_title).toLowerCase().includes(q.toLowerCase()));body.innerHTML=`<h3>${esc(title)} / ${String(filtered.length).padStart(4,'0')} REGISTROS</h3><input class="desktop-filter" placeholder="FILTRAR EXPEDIENTES..." value="${esc(q)}"><div class="archive-rows">${filtered.map(d=>`<button class="archive-row" data-document="${esc(d.id)}"><span>${esc(d.document_code)}</span><span class="archive-date">${esc(date(d.document_date))}</span><span>${esc(d.index_title||d.title)}</span><span>LVL ${Number(d.clearance_level)}</span></button>`).join('')||'<div class="archive-empty">NO HAY REGISTROS DISPONIBLES_</div>'}</div>`;body.querySelector('.desktop-filter').oninput=e=>{const pos=e.target.selectionStart;render(e.target.value);body.querySelector('.desktop-filter').focus();body.querySelector('.desktop-filter').setSelectionRange(pos,pos)};body.querySelectorAll('[data-document]').forEach(b=>b.onclick=()=>{cat=index;openDoc(b.dataset.document)})};render('')}catch(e){body.textContent='ERROR // '+e.message}}
+else if(kind==='search'){body.innerHTML='<h3>GLOBAL ARCHIVE SEARCH</h3><p class="window-description">RECUPERACIÓN DE DOCUMENTOS POR IDENTIFICADOR, TÍTULO O CONTENIDO.</p><div class="window-actions"><button data-go="search">OPEN SEARCH TERMINAL →</button></div>'}
+else{body.innerHTML='<h3>ADMINISTRATOR ACCESS / LEVEL 05</h3><p class="window-description">GESTIÓN DE EXPEDIENTES, LISTAS DE ACCESO Y CONFIGURACIÓN.</p><div class="window-actions"><button data-go="admin">OPEN CONTROL PANEL →</button></div>'}
+body.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>go(b.dataset.go));}
+
+async function categoryPage(){layout(nav()+`<div class="eyebrow">ROOT / ${esc(CATS[cat])}</div><h2>DIRECTORY : ${esc(CATS[cat])}</h2><section class="pc-window"><div class="pc-topline">PERSONAL TERMINAL</div><div class="window-tabs"><span class="win-tab active">${esc(PREFIX[cat])} / DIRECTORY</span><span class="win-tab">ARCHIVE BROWSER</span></div><div class="window-toolbar"><input id="filter" placeholder="FILTRAR ARCHIVOS..." aria-label="Filtrar archivos"><span id="count" class="muted small"></span></div><div class="window-body"><div id="results" class="box muted">RETRIEVING ARCHIVE...</div></div></section>`);wireNav();try{const rows=(await fetchDocs()).filter(d=>d.category===CATS[cat]);renderList(rows,'results');$('filter').oninput=()=>renderList(rows.filter(d=>(d.index_title+' '+d.title+' '+d.document_code).toLowerCase().includes($('filter').value.toLowerCase())),'results');}catch(e){flash(e.message,true)}}
+function renderList(rows,target){const count=$('count');if(count)count.textContent='RECORDS: '+String(rows.length).padStart(4,'0');$(target).innerHTML=rows.length?`<div class="tablewrap"><table><thead><tr><th>ID</th><th>FECHA</th><th>IDENTIFICACIÓN</th><th>LVL</th><th>ACCIÓN</th></tr></thead><tbody>${rows.map(d=>`<tr><td>${esc(d.document_code)}</td><td>${esc(date(d.document_date))}</td><td>${esc(d.index_title||d.title)}</td><td>${d.clearance_level}</td><td><button data-open="${esc(d.id)}">[ OPEN ]</button></td></tr>`).join('')}</tbody></table></div>`:'<div class="box muted">NO RECORDS AVAILABLE.</div>';document.querySelectorAll('[data-open]').forEach(b=>b.onclick=()=>openDoc(b.dataset.open))}
+async function searchPage(){layout(nav()+`<div class="eyebrow">ROOT / GLOBAL SEARCH</div><h2>GLOBAL ARCHIVE SEARCH</h2><section class="pc-window"><div class="pc-topline">PERSONAL TERMINAL</div><div class="window-tabs"><span class="win-tab active">SEARCH</span><span class="win-tab">ALL DIRECTORIES</span></div><div class="window-toolbar"><input id="query" placeholder="ENTER SEARCH QUERY..." value="${esc(searchTerm)}"></div><div class="window-body"><div id="results" class="box muted">ENTER SEARCH TERMS TO BEGIN.</div></div></section>`);wireNav();try{const rows=await fetchDocs();const run=()=>{const q=$('query').value.toLowerCase().trim();searchTerm=q;renderList(q?rows.filter(d=>[d.title,d.index_title,d.document_code,d.author,d.content,JSON.stringify(d.extra||{})].join(' ').toLowerCase().includes(q)):rows,'results')};$('query').oninput=run;run()}catch(e){flash(e.message,true)}}
+async function openDoc(id){
+ try {
+  doc=await getDoc(id);
+  if(!doc){flash('ACCESS DENIED / FILE NOT FOUND',true);return}
+  const x=doc.extra||{};
+  let special='';
+  if(doc.category===CATS[0]){
+   const pairs=[['FULL NAME',x.full_name],['BLOOD TYPE',x.blood_type],['DATE OF BIRTH',date(x.date_of_birth)],['DATE OF DEATH',date(x.date_of_death)],['HEIGHT',x.height_cm?x.height_cm+' CM':'—'],['WEIGHT',x.weight_kg?x.weight_kg+' KG':'—'],['LAST KNOWN LOCATION',x.location],['OCCUPATION',x.occupation],['LAST RECORDED ACTIVITY',x.last_records]];
+   special='<div class="tablewrap"><table><tbody>'+pairs.map(p=>'<tr><th>'+esc(p[0])+'</th><td>'+esc(p[1]||'—')+'</td></tr>').join('')+'</tbody></table></div>';
+  }
+  if(doc.category===CATS[2]&&x.registry){
+   const r=x.registry;
+   const head=(r.columns||[]).map(c=>'<th>'+esc(c)+'</th>').join('');
+   const body=(r.rows||[]).map(row=>'<tr>'+row.map(v=>'<td>'+esc(v)+'</td>').join('')+'</tr>').join('');
+   special='<h3>'+esc(r.title||'DATA TABLE')+'</h3><div class="tablewrap"><table><thead><tr>'+head+'</tr></thead><tbody>'+body+'</tbody></table></div>';
+  }
+  let files='';
+  if(mode==='demo')files=(doc.files||[]).map(f=>'<span class="small">'+esc(f.name)+' (demo file metadata)</span>').join(' ');
+  else {
+   const {data}=await sb.from('attachments').select('*').eq('document_id',id);
+   files=(data||[]).map(f=>'<button data-attach="'+esc(f.path)+'">↓ '+esc(f.filename)+'</button>').join(' ');
+  }
+  layout(nav()+`<button class="back" id="back">← RETURN TO DIRECTORY</button><div class="eyebrow">RECOVERED FILE // ${esc(doc.document_code)}</div><h2>${esc(doc.title)}</h2><section class="pc-window"><div class="pc-topline">PERSONAL TERMINAL</div><div class="window-tabs"><span class="win-tab active">${esc(doc.document_code)}</span><span class="win-tab">${esc(doc.category)}</span></div><div class="window-body"><div class="metadata"><div><span>CLASSIFICATION:</span> LEVEL ${doc.clearance_level} / ${LEVELS[doc.clearance_level]}</div><div><span>AUTHOR:</span> ${esc(doc.author||'UNKNOWN')}</div><div><span>DATE:</span> ${esc(date(doc.document_date))}</div><div><span>FILE TYPE:</span> ${esc(doc.category)}</div></div>${special}<h3>DOCUMENT BODY</h3><div class="content">${esc(doc.content||'NO FURTHER INFORMATION AVAILABLE.')}</div>${files?`<hr class="divider"><h3>ATTACHED DOCUMENTS</h3><div class="filelist">${files}</div>`:''}<hr class="divider"><span class="muted small">*** END OF RECORD ${esc(doc.document_code)} ***</span></div></section>`);
+  wireNav();
+  $('back').onclick=()=>go('category');
+  document.querySelectorAll('[data-attach]').forEach(b=>b.onclick=async()=>{
+   const {data,error}=await sb.storage.from('mother-files').createSignedUrl(b.dataset.attach,60);
+   if(error)flash(error.message,true);else window.open(data.signedUrl,'_blank','noopener');
+  });
+ }catch(e){flash(e.message,true)}
+}
+function admin(){layout(nav()+`<div class="eyebrow">SECURE AREA / ADMINISTRATOR AUTHORIZED</div><h2>SYSTEM ADMINISTRATION</h2><section class="pc-window"><div class="pc-topline">PERSONAL TERMINAL</div><div class="window-tabs"><span class="win-tab active">ADMIN</span><span class="win-tab">CONTROL NODE</span></div><div class="window-body"><div class="admin-air-grid">${[['CREAR ARCHIVO','create','SYS 01'],['EDITAR / ARCHIVAR DOCUMENTOS','adminDocs','SYS 02'],['GESTIÓN DE WHITELIST','users','SYS 03'],['CONFIGURACIÓN','config','SYS 04']].map(([t,v,code])=>`<button class="admin-air-card" data-admin="${v}"><span class="microline">${code}</span><b>${t}</b><small>EXECUTE</small></button>`).join('')}</div><p class="warning small">${mode==='demo'?'DEMO LOCAL: DATOS SOLO EN ESTE NAVEGADOR. NO UTILIZAR COMO ARCHIVO PROTEGIDO.':'DATABASE SECURITY ENABLED: ENFORCED BY SUPABASE RLS.'}</p></div></section>`);wireNav();document.querySelectorAll('[data-admin]').forEach(b=>b.onclick=()=>{editing=false;doc=null;go(b.dataset.admin)})}
+async function adminDocs(){layout(nav()+`<div class="eyebrow">SECURE AREA / DOCUMENT CONTROL</div><h2>DOCUMENT CONTROL</h2><section class="pc-window"><div class="pc-topline">PERSONAL TERMINAL</div><div class="window-tabs"><span class="win-tab active">CONTROL</span><span class="win-tab">ARCHIVE FILES</span></div><div class="window-body"><div id="results" class="box muted">LOADING...</div></div></section>`);wireNav();try{const rows=await fetchOwnAllDocs();$('results').innerHTML=`<div class="tablewrap"><table><tr><th>ID</th><th>DOCUMENTO</th><th>NIVEL</th><th>ESTADO</th><th>OPERACIONES</th></tr>${rows.map(d=>`<tr><td>${esc(d.document_code)}</td><td>${esc(d.title)}</td><td>${d.clearance_level}</td><td>${esc(d.status)}</td><td><button data-edit="${d.id}">EDITAR</button> <button class="danger" data-archive="${d.id}">ARCHIVAR</button></td></tr>`).join('')}</table></div>`;document.querySelectorAll('[data-edit]').forEach(b=>b.onclick=()=>{doc=rows.find(x=>x.id===b.dataset.edit);editing=true;formCat=CATS.indexOf(doc.category);go('create')});document.querySelectorAll('[data-archive]').forEach(b=>b.onclick=async()=>{if(!confirm('¿Archivar expediente? No aparecerá en el índice.'))return;try{if(mode==='demo'){const d=store.documents.find(x=>x.id===b.dataset.archive);d.status='archived';save()}else{const {error}=await sb.from('documents').update({status:'archived'}).eq('id',b.dataset.archive);if(error)throw error}adminDocs()}catch(e){flash(e.message,true)}})}catch(e){flash(e.message,true)}}
+const field=(id,label,value='',type='text',required=false)=>`<div class="field"><label for="${id}">${label}</label><input id="${id}" type="${type}" ${required?'required':''} value="${esc(value)}"></div>`,area=(id,label,value='')=>`<div class="field"><label for="${id}">${label}</label><textarea id="${id}" rows="8">${esc(value)}</textarea></div>`;
+function formPage(){const x=doc?.extra||{};if(!editing)doc=null;const sec=editing?formCat:formCat;let specific='';if(sec===0)specific=`<div class="cols">${field('full_name','NOMBRE COMPLETO',x.full_name,'text',true)}${field('blood_type','GRUPO SANGUÍNEO',x.blood_type)}${field('date_of_birth','FECHA NACIMIENTO',x.date_of_birth,'date')}${field('date_of_death','FECHA DEFUNCIÓN',x.date_of_death,'date')}${field('height_cm','ALTURA (CM)',x.height_cm,'number')}${field('weight_kg','PESO (KG)',x.weight_kg,'number')}${field('location','LOCALIZACIÓN',x.location)}${field('occupation','OCUPACIÓN',x.occupation)}</div>${area('last_records','ÚLTIMOS REGISTROS',x.last_records||'')}`;
+if(sec===2)specific=`${field('table_title','TÍTULO DE TABLA',x.registry?.title||'DATA LOG')}<div class="topline"><h3>CONSTRUCTOR DE TABLAS</h3><div class="row-actions"><button type="button" id="addcol">+ COLUMNA</button><button type="button" id="addrow">+ FILA</button><button type="button" id="delrow">− FILA</button></div></div><div id="tableeditor"></div><div class="field"><label>IMPORTAR TABLA DESDE EXCEL (.XLSX, .XLS, .CSV)</label><input id="excel" type="file" accept=".xlsx,.xls,.csv"><small>Se importará la primera hoja y podrás editar sus valores antes de guardar.</small></div>`;
+if(sec===3)specific='<div class="notice">CLASSIFIED INFORMATION — EL NIVEL ELEGIDO RESTRINGE EL ACCESO A ESTE EXPEDIENTE.</div>';
+layout(nav()+`<div class="eyebrow">ADMIN / ${editing?'EDIT EXISTING':'NEW RECORD'}</div><h2>${editing?'EDITAR ARCHIVO':'CREAR NUEVO ARCHIVO'}</h2>${!editing?`<div class="field"><label>TIPO DE DOCUMENTO</label><select id="doctype">${CATS.map((c,i)=>`<option value="${i}" ${i===sec?'selected':''}>${c}</option>`).join('')}</select></div>`:''}<form id="record"><div class="cols">${field('title',sec===0?'TÍTULO DE FICHA':'TÍTULO',doc?.title||'', 'text',true)}${field('index_title','NOMBRE EN ÍNDICE',doc?.index_title||'','text',true)}${field('author','AUTOR',doc?.author||'')}${field('document_date','FECHA DEL DOCUMENTO',doc?.document_date||today(),'date',true)}<div class="field"><label>NIVEL DE VISIBILIDAD / SEGURIDAD</label><select id="level">${[1,2,3,4,5].map(n=>`<option value="${n}" ${+(doc?.clearance_level||1)===n?'selected':''}>${n} — ${LEVELS[n]}</option>`).join('')}</select></div><div class="field"><label>ESTADO</label><select id="status"><option value="published" ${doc?.status!=='draft'?'selected':''}>PUBLICADO</option><option value="draft" ${doc?.status==='draft'?'selected':''}>BORRADOR</option></select></div></div>${specific}${area('content',sec===0?'INFORMACIÓN ADICIONAL':'CUERPO DEL DOCUMENTO',doc?.content||'')}<div class="field"><label>IMÁGENES / DOCUMENTOS ADJUNTOS</label><input type="file" id="uploads" multiple accept=".pdf,.txt,.docx,.xlsx,.xls,.csv,.jpg,.jpeg,.png,.webp"><small>Admite varios archivos. En la DEMO solo se guardarán los nombres; con Supabase se guardan en Storage privado.</small></div><div class="actions"><button class="primary" type="submit">[ ${editing?'GUARDAR CAMBIOS':'CREAR ARCHIVO'} ]</button><button type="button" id="cancel">[ CANCELAR ]</button></div></form>`);wireNav();$('cancel').onclick=()=>go('admin');if($('doctype'))$('doctype').onchange=()=>{formCat=+$('doctype').value;formPage()};if(sec===2){registry=x.registry?structuredClone(x.registry):{title:'DATA LOG',columns:['CAMPO','VALOR'],rows:[['001','ACTIVE']]};renderEditor();$('addcol').onclick=()=>{captureEditor();registry.columns.push('COLUMNA '+(registry.columns.length+1));registry.rows.forEach(r=>r.push(''));renderEditor()};$('addrow').onclick=()=>{captureEditor();registry.rows.push(registry.columns.map(() =>''));renderEditor()};$('delrow').onclick=()=>{captureEditor();registry.rows.pop();renderEditor()};$('excel').onchange=async()=>{try{const f=$('excel').files[0];if(!f)return;if(f.size>10*1024*1024)throw Error('EL ARCHIVO SUPERA 10 MB');const wb=XLSX.read(await f.arrayBuffer(),{type:'array',cellDates:true});const sheet=wb.Sheets[wb.SheetNames[0]],raw=XLSX.utils.sheet_to_json(sheet,{header:1,defval:'',raw:false});if(!raw.length)throw Error('HOJA VACÍA');registry={title:$('table_title').value,columns:raw[0].map(String),rows:raw.slice(1,1001).map(r=>raw[0].map((_,i)=>String(r[i]??'')))};renderEditor();flash('TABLA IMPORTADA / '+registry.rows.length+' FILAS')}catch(e){flash(e.message,true)}}}
+$('record').onsubmit=submitRecord}
+function renderEditor(){$('tableeditor').innerHTML=`<div class="tablewrap spreadsheet"><table><thead><tr><th>#</th>${registry.columns.map((c,i)=>`<th><input aria-label="Nombre columna ${i+1}" data-head="${i}" value="${esc(c)}"></th>`).join('')}</tr></thead><tbody>${registry.rows.map((row,i)=>`<tr><td>${i+1}</td>${registry.columns.map((_,j)=>`<td><input data-cell="${i}:${j}" aria-label="Fila ${i+1} columna ${j+1}" value="${esc(row[j]||'')}"></td>`).join('')}</tr>`).join('')}</tbody></table></div>`}
+function captureEditor(){document.querySelectorAll('[data-head]').forEach(i=>registry.columns[+i.dataset.head]=i.value);document.querySelectorAll('[data-cell]').forEach(i=>{const [r,c]=i.dataset.cell.split(':').map(Number);registry.rows[r][c]=i.value})}
+async function submitRecord(e){e.preventDefault();const s=formCat,extras=editing?structuredClone(doc.extra||{}):{},get=k=>$(k)?.value||'';if(s===0)['full_name','blood_type','date_of_birth','date_of_death','height_cm','weight_kg','location','occupation','last_records'].forEach(k=>extras[k]=get(k));if(s===2){captureEditor();registry.title=get('table_title');extras.registry=registry}const data={category:CATS[s],title:get('title'),index_title:get('index_title'),author:get('author'),document_date:get('document_date'),clearance_level:+get('level'),status:get('status'),content:get('content'),extra:extras};const btn=e.submitter;if(btn)btn.disabled=true;try{let id=doc?.id;if(mode==='demo'){if(editing){Object.assign(store.documents.find(d=>d.id===id),data)}else{id=uid();data.id=id;data.document_code=PREFIX[s]+'-'+String(store.documents.filter(d=>d.category===CATS[s]).length+1).padStart(4,'0');data.created_at=new Date().toISOString();store.documents.push(data)}const fs=[...$('uploads').files];const d=store.documents.find(z=>z.id===id);d.files=[...(d.files||[]),...fs.map(f=>({name:f.name}))];save()}else{if(editing){const {error}=await sb.from('documents').update(data).eq('id',id);if(error)throw error}else{const {data:inserted,error}=await sb.from('documents').insert(data).select('id').single();if(error)throw error;id=inserted.id}for(const f of [...$('uploads').files]){if(f.size>15*1024*1024)throw Error('TAMAÑO DE ARCHIVO EXCEDIDO: '+f.name);const path=id+'/'+uid()+'/'+f.name.replace(/[^a-zA-Z0-9._-]/g,'_');const {error:uploadError}=await sb.storage.from('mother-files').upload(path,f,{upsert:false});if(uploadError)throw uploadError;const {error:metaError}=await sb.from('attachments').insert({document_id:id,path,filename:f.name,mime_type:f.type,file_size:f.size});if(metaError)throw metaError}}editing=false;doc=null;formCat=0;go('adminDocs');flash('ARCHIVO GUARDADO CORRECTAMENTE')}catch(err){flash(err.message,true)}finally{if(btn)btn.disabled=false}}
+async function usersPage(){layout(nav()+`<h2>USER ACCESS CONTROL / WHITELIST</h2><div class="box"><form id="adduser"><div class="cols">${field('newemail','CORREO AUTORIZADO','','email',true)}<div class="field"><label>NIVEL DE SEGURIDAD</label><select id="newlevel">${[1,2,3,4,5].map(n=>`<option value="${n}">${n} — ${LEVELS[n]}</option>`).join('')}</select></div></div><button type="submit">[ AUTORIZAR USUARIO ]</button></form></div><div id="users">LOADING PERSONNEL...</div>`);wireNav();$('adduser').onsubmit=async e=>{e.preventDefault();try{const mail=$('newemail').value.trim().toLowerCase();if(mode==='demo'){if(store.users.some(u=>u.email===mail))throw Error('USUARIO YA EXISTENTE');store.users.push({email:mail,clearance_level:+$('newlevel').value,role:'viewer',status:'active'});save()}else{const {error}=await sb.from('allowed_users').insert({email:mail,clearance_level:+$('newlevel').value,role:'viewer',status:'active'});if(error)throw error}usersPage();flash('USUARIO AÑADIDO A WHITELIST')}catch(e){flash(e.message,true)}};try{let rows;if(mode==='demo')rows=store.users;else{const {data,error}=await sb.from('allowed_users').select('*').order('email');if(error)throw error;rows=data||[]} $('users').innerHTML=`<div class="tablewrap"><table><tr><th>EMAIL</th><th>RANGO</th><th>ESTADO</th><th>OPERACIÓN</th></tr>${rows.map(u=>`<tr><td>${esc(u.email)} ${u.role==='admin'?'[ADMIN]':''}</td><td><select data-level="${esc(u.email)}" ${u.email===ADMIN_EMAIL?'disabled':''}>${[1,2,3,4,5].map(n=>`<option value="${n}" ${+u.clearance_level===n?'selected':''}>${n}</option>`).join('')}</select></td><td><select data-status="${esc(u.email)}" ${u.email===ADMIN_EMAIL?'disabled':''}><option value="active" ${u.status==='active'?'selected':''}>ACTIVE</option><option value="suspended" ${u.status==='suspended'?'selected':''}>SUSPENDED</option></select></td><td><button data-saveuser="${esc(u.email)}" ${u.email===ADMIN_EMAIL?'disabled':''}>GUARDAR</button></td></tr>`).join('')}</table></div>`;document.querySelectorAll('[data-saveuser]').forEach(b=>b.onclick=async()=>{try{const email=b.dataset.saveuser,lv=+document.querySelector('[data-level="'+CSS.escape(email)+'"]').value,status=document.querySelector('[data-status="'+CSS.escape(email)+'"]').value;if(mode==='demo'){Object.assign(store.users.find(u=>u.email===email),{clearance_level:lv,status});save()}else{const {error}=await sb.from('allowed_users').update({clearance_level:lv,status}).eq('email',email);if(error)throw error}flash('PERMISSIONS UPDATED')}catch(e){flash(e.message,true)}})}catch(e){flash(e.message,true)}}
+function configPage(){const cfg=readConfig();layout(nav()+`<h2>SYSTEM CONFIGURATION</h2><div class="box"><p>DISPLAY HARDWARE</p><button id="crtbutton">TOGGLE CRT FILTER</button> <button id="bootbutton">RESTART BOOT SEQUENCE</button></div><div class="box"><h3>DATABASE CONNECTION</h3><p class="small muted">${sb?'SUPABASE CONNECTED TO '+esc(cfg.url):'NO SUPABASE PROJECT CONFIGURED'}</p><button id="configure">SET / CHANGE SUPABASE CONNECTION</button><p class="warning small">No pegues claves privadas. El proyecto SQL debe instalarse antes de acceder con usuarios reales.</p></div>`);wireNav();$('crtbutton').onclick=()=>{$('crt').click()};$('bootbutton').onclick=splash;$('configure').onclick=()=>{if(!confirm('Cambiar conexión cerrará esta sesión. ¿Continuar?'))return;user=null;setupPage()}}
+async function start(){if(mode==='supabase'&&sb){const {data}=await sb.auth.getUser();if(data?.user){await sessionToUser(data.user);return}}if(mode==='demo'){mode='none';localStorage.removeItem('mother_mode')}splash()}
+start();
+})();
+</script></body></html>
